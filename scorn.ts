@@ -90,7 +90,7 @@ const runLighthouseTests = async (args: IInitialArgs) => {
       const score = await startLighthouseTest(filteredArgs);
       const scoreOutput = `${getScoreColor(score)}${score}\x1b[0m`;
       total += score;
-      console.log(`${i} of ${count} - ${scoreOutput}`);
+      console.log(`${i + 1} of ${count} - ${scoreOutput}`);
     }
     const totalOutput = `${getScoreColor(total / count)}${total / count}\x1b[0m`;
     console.log(`Average score: ${totalOutput}`);
